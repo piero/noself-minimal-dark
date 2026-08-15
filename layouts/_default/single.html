@@ -2,7 +2,18 @@
 <article>
   <header class="post-header">
     {{ if and .Date (not .Date.IsZero) }}
-      <p class="post-meta">{{ .Date.Format "2006-01-02" }}</p>
+    <p class="post-meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+        {{ with .Params.tags }}
+        <span class="post-tags">
+            ●
+            {{ range $index, $tag := . }}
+            {{ if $index }}, {{ end }}
+                <a href="{{ "/tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+            {{ end }}
+        </span>
+        {{ end }}
+    </p>
     {{ end }}
 
     <h1>{{ .Title }}</h1>
