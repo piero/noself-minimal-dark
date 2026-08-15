@@ -1,0 +1,9 @@
+name = "Minimal Dark"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "A dark, minimal, mobile-first Hugo theme with monospace typography and KaTeX support."
+homepage = "https://gohugo.io/"
+tags = ["dark", "minimal", "responsive", "monospace", "latex", "katex"]
+features = ["responsive", "katex"]
+min_version = "0.120.0"
+recent_posts = 5

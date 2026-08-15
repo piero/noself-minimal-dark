@@ -1,0 +1,6 @@
+{{- $type := .Type -}}
+{{- if eq $type "math" -}}
+  {{- .Text | safeHTML -}}
+{{- else -}}
+  <div class="notice notice-{{ $type }}">{{ .Text }}</div>
+{{- end -}}

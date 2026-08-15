@@ -1,0 +1,40 @@
+{{ define "main" }}
+{{ $home := . }}
+
+<section class="hero">
+  <p class="eyebrow">{{ $home.Site.Params.eyebrow }}</p>
+  <h1>{{ $home.Site.Title }}</h1>
+
+  {{ with $home.Site.Params.description }}
+    <p class="lead">{{ . }}</p>
+  {{ end }}
+</section>
+
+{{ with $home.Content }}
+  <div class="prose">{{ . }}</div>
+{{ end }}
+
+{{ range $home.Site.Params.homepageSections }}
+  <section class="home-section">
+    <h2>{{ .title }}</h2>
+    <p>{{ .text }}</p>
+  </section>
+{{ end }}
+
+{{ $posts := where $home.Site.RegularPages "Section" "posts" }}
+{{ $limit := $home.Site.Params.recentPosts | default 5 }}
+
+<section class="home-section">
+  <h2>recent posts</h2>
+  <ul class="post-list">
+    {{ range first $limit ($posts.ByDate.Reverse) }}
+      <li>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <span class="post-meta">{{ .Date.Format "2006-01-02" }}</span>
+      </li>
+    {{ else }}
+      <li>No posts found.</li>
+    {{ end }}
+  </ul>
+</section>
+{{ end }}

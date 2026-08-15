@@ -1,0 +1,7 @@
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ if or .Params.math .Site.Params.math }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+integrity="sha384-5TcZ6P0o2tYxG8p9qM9yW8H6J2m8Q5yQw8lQ0wF0dYwQ6zY6J3K9mQ8qP4m5vX"
+crossorigin="anonymous">
+{{ end }}

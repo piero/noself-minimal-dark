@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article>
+  <header class="post-header">
+    {{ if and .Date (not .Date.IsZero) }}
+      <p class="post-meta">{{ .Date.Format "2006-01-02" }}</p>
+    {{ end }}
+
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

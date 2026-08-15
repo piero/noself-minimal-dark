@@ -1,0 +1,18 @@
+baseURL = "https://example.com/"
+languageCode = "en"
+title = "Your Name"
+theme = "noself-minimal-dark"
+
+[params]
+description = "A minimal personal site."
+eyebrow = "Notes · Code · Ideas"
+math = true
+footer = "© 2026 Your Name"
+
+[[menus.main]]
+name = "About"
+url = "/about/"
+
+[[menus.main]]
+name = "Posts"
+url = "/posts/"
