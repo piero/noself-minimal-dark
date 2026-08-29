@@ -1,11 +1,11 @@
 /* Minimal Dark — mobile first */
 :root {
   color-scheme: dark;
-  --bg: #0b0d10;
+  --bg: #181818;
   --surface: #11151a;
-  --text: #e6e9ed;
+  --text: #c3c3c3;
   --muted: #9aa3ad;
-  --faint: #20262d;
+  --faint: #4e4e4e;
   --accent: #8ab4ff;
   --max-width: 760px;
   --radius: 6px;
