@@ -68,6 +68,11 @@ p, ul, ol, pre, blockquote, table { margin: 1.2rem 0; }
 a { color: var(--accent); }
 a:hover { text-decoration-thickness: 2px; }
 
+.text-small {
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
 .lead { color: var(--muted); font-size: 1.05rem; }
 
 .post-meta, .eyebrow {
