@@ -11,6 +11,14 @@
   --radius: 6px;
 }
 
+@font-face {
+  font-family: "FiraCode-VF";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/FiraCode-VF.woff2") format("woff2");
+}
+
 * { box-sizing: border-box; }
 
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -19,7 +27,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+  font-family: "FiraCode-VF", SFMono-Regular, Menlo, Monaco, Consolas,
                "Liberation Mono", "Courier New", monospace;
   line-height: 1.72;
   text-rendering: optimizeLegibility;
